@@ -100,7 +100,7 @@ a {
             rgba(25, 14, 9, 0.88) 0%,
             rgba(25, 14, 9, 0.64) 55%,
             rgba(25, 14, 9, 0.35) 100%),
-        url("./focus%20image/hero.png.jpeg");
+        url("./hero.png.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
