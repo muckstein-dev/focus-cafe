@@ -8,7 +8,8 @@ if (menuToggle && navLinks) {
     menuToggle.addEventListener("click", () => {
         const isOpen = navLinks.classList.toggle("open");
 
-        menuToggle.textContent = isOpen ? "×" : "☰";
+        menuToggle.innerHTML = isOpen ?
+            "&times;" : "&#9776;";
         menuToggle.setAttribute("aria-expanded", String(isOpen));
         menuToggle.setAttribute(
             "aria-label",
