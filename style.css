@@ -336,7 +336,6 @@ footer p {
 
     .navbar nav.open {
         display: flex;
-        z-index: 1000;
     }
 
     .hero {
