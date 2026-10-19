@@ -320,6 +320,13 @@ footer p {
 
     .menu-toggle {
         display: block;
+        cursor: pointer;
+        font-size: 28px;
+        color: #ffffff;
+        background: transparent;
+        border: none;
+        position: relative;
+        z-index: 1001;
     }
 
     .navbar nav {
