@@ -1,30 +1,33 @@
-"use strict";
 
-// 1. Find the navigation elements
+// 1. Mobile navigation menu
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
-// 2. Open and close the mobile navigation
 if (menuToggle && navLinks) {
+    // Open and close the menu
     menuToggle.addEventListener("click", () => {
         const isOpen = navLinks.classList.toggle("open");
 
+        menuToggle.textContent = isOpen ? "×" : "☰";
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
         menuToggle.setAttribute(
-            "aria-expanded",
-            String(isOpen)
+            "aria-label",
+            isOpen ? "Close navigation" : "Open navigation"
         );
     });
 
-    // Close the menu after a navigation link is clicked
+    // Close the menu after clicking a navigation link
     navLinks.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", () => {
             navLinks.classList.remove("open");
+            menuToggle.textContent = "☰";
             menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation");
         });
     });
 }
 
-// 3. Display the current year in the footer
+// 2. Display the current year in the footer
 const yearElement = document.getElementById("year");
 
 if (yearElement) {
